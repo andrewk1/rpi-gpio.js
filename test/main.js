@@ -979,7 +979,7 @@ describe('rpi-gpio', function() {
                 this.timeout(15000);
                 beforeEach(function () {
                     fs.writeFile.reset();
-                    return gpioPromise.destroy();
+                    return gpioPromise.destroy(done);
                 })
 
                 it('should unexport pin 7', function () {
